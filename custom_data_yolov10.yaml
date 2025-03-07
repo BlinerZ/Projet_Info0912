@@ -1,0 +1,5 @@
+train: /mnt/c/Users/Bline/Desktop/Studies/YoloV10/data/train/images
+val: /mnt/c/Users/Bline/Desktop/Studies/YoloV10/data/test/images
+
+nc: 1 
+names: ['disease']
