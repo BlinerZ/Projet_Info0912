@@ -5,6 +5,7 @@
 - DARVILLE Killian
 
 Utilisation de YoloV5 et YoloV10 pour la détection d'objets sur une base de données de maladies de plantes.
+Nous avons choisis le modèle 'M' de YoloV5 et YoloV10 qui est le modèle moyen (en terme de taille) pour chacuns d'entre eux afin d'obtenir un bon compromis entre efficacité et temps d'entrainement.
 
 ## Structure du projet
 

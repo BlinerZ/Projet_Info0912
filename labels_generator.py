@@ -1,12 +1,20 @@
 import os
 import cv2
 
-def generate_bounding_boxes(mask_path):
+def generate_bounding_boxes(mask_path: str) -> None:
+    """
+    Crée les BBOX à partir da le méthode findContours
+    
+    Args:
+        mask_path (str): Le lien vers le mask de l'image
+    """
     mask = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)
+    # Détècte les contours
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     bounding_boxes = []
     for contour in contours:
+        # Récupère les coordonnées de chaque contour
         x, y, w, h = cv2.boundingRect(contour)
         bounding_boxes.append([float(x), float(y), float(w), float(h)])
 
